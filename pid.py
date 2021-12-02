@@ -30,7 +30,7 @@ class Spoofer():
         new_pID = f'{val1}-{val2}-{val3}-{val4}'
         try:
             if self.pID != new_pID:
-                winreg.SetValueEx(self.key, 'ProductId', 0, winreg.REG_SZ, f'{val1}-{val2}-{val3}-{val4}')
+                winreg.SetValueEx(self.key, 'ProductId', 0, winreg.REG_SZ, new_pID)
         except Exception as err:
             print(err)
 
